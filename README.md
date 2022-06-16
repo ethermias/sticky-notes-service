@@ -1,6 +1,6 @@
 # sticky-notes-service
 
-![The Sticky Notes](https://github.com/ethermias/sticky-notes-service/settings/og-template)
+![The Sticky Notes](sticky-notes.jpg)
 
 ## Execute  
 
