@@ -6,12 +6,12 @@ cabal-version: 1.12
 
 name:           sticky-notes-service
 version:        0.1.0.0
-description:    Please see the README on Github at <https://github.com/githubuser/sticky-notes-service#readme>
+description:    Please see the README on Github at <https://github.com/ethermias/sticky-notes-service#readme>
 homepage:       https://github.com/githubuser/sticky-notes-service#readme
 bug-reports:    https://github.com/githubuser/sticky-notes-service/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2022 Author name here
+author:         Jermi
+maintainer:     ethermias@gmail.com
+copyright:      2022 Jermi
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,48 +23,23 @@ source-repository head
   type: git
   location: https://github.com/githubuser/sticky-notes-service
 
-library
-  exposed-modules:
-      Import
-      Run
-      Types
-      Util
-  other-modules:
-      Paths_sticky_notes_service
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.11 && <10
-    , rio >=0.1.12.0
-  default-language: Haskell2010
-
-executable sticky-notes-service-exe
+executable simple-json-api-haskell-exe
   main-is: Main.hs
   other-modules:
       Paths_sticky_notes_service
   hs-source-dirs:
-      app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+      src
+  default-extensions:
+      DeriveGeneric
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      OverloadedStrings
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      base >=4.11 && <10
-    , optparse-simple
-    , rio >=0.1.12.0
-    , sticky-notes-service
-  default-language: Haskell2010
-
-test-suite sticky-notes-service-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      UtilSpec
-      Paths_sticky_notes_service
-  hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.11 && <10
-    , hspec
-    , rio >=0.1.12.0
-    , sticky-notes-service
+      aeson
+    , base >=4.7 && <5
+    , containers
+    , mtl
+    , scotty
+    , text
   default-language: Haskell2010
