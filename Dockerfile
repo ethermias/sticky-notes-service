@@ -10,5 +10,4 @@ COPY . .
 
 RUN stack build
 
-CMD ["echo", "start service ......................................"]
-CMD ["stack", "exec -- sticky-notes-service-exe --verbose"]
+CMD stack exec -- sticky-notes-service-exe --verbose
