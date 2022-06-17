@@ -23,7 +23,7 @@ source-repository head
   type: git
   location: https://github.com/githubuser/sticky-notes-service
 
-executable simple-json-api-haskell-exe
+executable sticky-notes-service-exe
   main-is: Main.hs
   other-modules:
       Paths_sticky_notes_service

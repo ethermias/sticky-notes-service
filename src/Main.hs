@@ -5,7 +5,7 @@ import Web.Scotty
 main :: IO ()
 main = do
   putStrLn "Starting Server..."
-  scotty 8388 routes
+  scotty 8888 routes
 
  
 routes :: ScottyM ()

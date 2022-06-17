@@ -34,7 +34,7 @@ default-extensions:
   - OverloadedStrings
 
 executables:
-  simple-json-api-haskell-exe:
+  sticky-notes-service-exe:
     main:                Main.hs
     source-dirs:         src
     ghc-options:

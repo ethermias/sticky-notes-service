@@ -1,11 +1,14 @@
-FROM ethermias/stack:0.0.4
+FROM ethermias/stack:0.0.5
 
 MAINTAINER jermi
 
 WORKDIR /code
 
-EXPOSE 8388
+EXPOSE 8888
 
 COPY . .
 
-CMD ["stack", "run"]
+RUN stack build
+
+CMD ["echo", "start service ......................................"]
+CMD ["stack", "exec -- sticky-notes-service-exe --verbose"]
