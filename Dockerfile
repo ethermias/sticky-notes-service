@@ -1,23 +1,11 @@
-FROM ubuntu:16.04
+FROM ethermias/stack:0.0.4
 
 MAINTAINER jermi
 
-RUN  apt-get update \
-  && apt-get -y upgrade \
-  && apt-get install -y wget \
-  && rm -rf /var/lib/apt/lists/* \
-  && apt-get update
+WORKDIR /code
 
-RUN wget -qO- https://get.haskellstack.org/ | sh
+EXPOSE 8388
 
-CMD ["echo", "Hello Haskell..8288."]
+COPY . .
 
-RUN cp -r ~/ sticky-notes/
-
-RUN cd sticky-notes
-
-RUN stack run
-
-EXPOSE 8188
-
-CMD ["echo", "Hello Haskell..done."]
+CMD ["stack", "run"]
