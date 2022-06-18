@@ -10,4 +10,4 @@ COPY . .
 
 RUN stack build
 
-CMD stack exec -- sticky-notes-service-exe --verbose
+CMD ["stack", "exec", "sticky-notes-service-exe"]
