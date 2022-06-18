@@ -11,3 +11,4 @@ COPY . .
 RUN stack build
 
 CMD ["stack", "exec", "sticky-notes-service-exe"]
+CMD ["echo", "starting sticky-notes-service ..."]

@@ -26,6 +26,8 @@ source-repository head
 executable sticky-notes-service-exe
   main-is: Main.hs
   other-modules:
+      Content
+      Swagger
       Paths_sticky_notes_service
   hs-source-dirs:
       src
