@@ -27,6 +27,7 @@ executable sticky-notes-service-exe
   main-is: Main.hs
   other-modules:
       Content
+      Routes
       Swagger
       Paths_sticky_notes_service
   hs-source-dirs:
