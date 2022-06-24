@@ -30,7 +30,7 @@ fromList :: [String] -> [[String]]
 fromList (x:xs) = reverse $ foldl (\a@(y:ys) v ->
     if isNode v
         then [v]:a
-        else (y ++ [v]):ys
+        else (if v /= "" then y ++ [v] else y):ys
     ) [[x]] xs
 
 isNode :: String -> Bool
