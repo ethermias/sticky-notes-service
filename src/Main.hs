@@ -9,10 +9,11 @@ main :: IO ()
 main = do
   putStrLn "Starting Server..."  
   name <- tableOfContents
-  scotty 8888 $ routes name 
+  scotty 8888 $ routes name
 
-tableOfContents :: IO String
+tableOfContents :: IO [String]
 tableOfContents = do 
-                handle <- openFile "tableOfContents.yaml" ReadMode  
-                contents <- hGetContents handle 
-                return contents 
+                contents <- readFile "tableOfContents.yaml"
+                return $ lines contents
+
+
